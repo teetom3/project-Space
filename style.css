@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+  color: #ffffff;
+  background-color: #000000; /* Fond noir */
+}
+
+/* En-tête + Navigation */
+header {
+    background: radial-gradient(circle, rgba(36,68,136,1) 0%, rgba(0,0,0,1) 100%);
+  padding: 1rem 2rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Barre latérale */
+.sidebar {
+  position: fixed;
+  
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(36,68,136,1) 0%, rgba(0,0,0,1) 100%);
+  padding-top: 2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.sidebar a:hover {
+  background-color: #333333;
+}
+
+.sidebar .icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Contenu principal */
+main {
+  margin-left: 200px; /* Pour laisser la place à la sidebar */
+  padding: 2rem;
+  background: #000 url("space.jpeg") center/cover no-repeat;
+  min-height: 100vh;
+}
+
+/* Section "About the Universe" */
+.about-universe {
+  margin-bottom: 3rem;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    );
+    
+  border: 1px solid #333;
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+.about-banner {
+  max-width: 600px;
+}
+
+.about-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-banner p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0066cc;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #004999;
+}
+
+/* Section "Les Chiffres" */
+.les-chiffres {
+  margin-bottom: 3rem;
+  background-color: #111111b7;
+  padding: 2rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.les-chiffres h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.les-chiffres p {
+  margin-bottom: 2rem;
+}
+
+/* Conteneur des stats */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  flex: 1 1 200px;
+  background-color: #1a1a1ae3;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Bouton mission */
+.btn-mission {
+  background-color: #00cc66;
+}
+
+.btn-mission:hover {
+  background-color: #00994d;
+}
+
+.selected {
+    background: #0066cc;
+    padding: 3px;
+}
+
+
+.card {
+    width: 50%;
+    padding: 10px;
+    background: #00000050;
+    border-radius: 10px;
+
+}
+/* Formulaire de recherche + tri */
+.form-group {
+    display: flex;
+    
+    margin-bottom: 1rem;
+    padding: 30px;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .form-group input[type="text"] {
+    padding: 6px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .form-group select {
+    
+    padding: 6px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Tableau des planètes */
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+
+  table th {
+    background-color: #333;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  /* Pied de table pour le nombre de résultats */
+  #result-count {
+    margin-top: 10px;
+  }

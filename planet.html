@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SpaceX - Page de présentation</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+  <header>
+    <nav class="main-nav">
+      <div class="logo"><img src="logotype (1).png" alt=""></div>
+      <ul>
+        <li><a href="index.html">ACCUEIL</a></li>
+        <li><a href="#">PROCHAINE MISSION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <aside class="sidebar">
+    <ul>
+      <li>
+        <a href="/planet.html">
+      
+          <span class="icon selected">🌐</span>
+          <p class="selected">PLANÈTES</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        
+          <span class="icon">🚀</span>
+          VÉHICULES
+        </a>
+      </li>
+      <li>
+        <a href="#">
+     
+          <span class="icon">👤</span>
+          PERSONNES
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main>
+
+
+    <div class="card">
+        <h2>Planètes</h2>
+ 
+        <div class="form-group">
+          <label for="searchInput">Recherche&nbsp;:</label>
+          <input type="text" id="searchInput" placeholder="Tapez un nom de planète..." />
+  
+          <label for="sortSelect">Trier par&nbsp;:</label>
+          <select id="sortSelect">
+            <option value="">Aucun tri</option>
+            <option value="population-asc">Population (croissante)</option>
+            <option value="population-desc">Population (décroissante)</option>
+          </select>
+        </div>
+  
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Terrain</th>
+              <th>Population</th>
+            </tr>
+          </thead>
+          <tbody id="planetTableBody">
+    
+          </tbody>
+        </table>
+  
+       
+        <div id="result-count">0 résultat(s)</div>
+      </div>
+    </div>
+  
+
+   
+
+
+    </section>
+  </main>
+  <script src="planet.js"></script>
+</body>
+</html>
