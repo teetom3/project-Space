@@ -8,7 +8,9 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  
+  <script>
+    let activePage = "planet";
+   </script>
   <header>
     <nav class="main-nav">
       <div class="logo"><img src="logotype (1).png" alt=""></div>
@@ -46,7 +48,7 @@
     </ul>
   </aside>
 
-  <main>
+  <main class="planet_info">
 
 
     <div class="card">
@@ -54,13 +56,14 @@
  
         <div class="form-group">
           <label for="searchInput">Recherche&nbsp;:</label>
-          <input type="text" id="searchInput" placeholder="Tapez un nom de planète..." />
+          <input type="search" id="searchInput" placeholder="Tapez un nom de planète..." />
   
-          <label for="sortSelect">Trier par&nbsp;:</label>
-          <select id="sortSelect">
-            <option value="">Aucun tri</option>
-            <option value="population-asc">Population (croissante)</option>
-            <option value="population-desc">Population (décroissante)</option>
+          <label for="sortSelect">Trier par Population&nbsp;:</label>
+          <select id="sortSelect" >
+            <option value="0">Aucun tri</option>
+            <option value="1">0-100 000</option>
+            <option value="2">100 000 à 1 000 000</option>
+            <option value="3">+ 1 000 000</option>
           </select>
         </div>
   
@@ -78,16 +81,49 @@
         </table>
   
        
-        <div id="result-count">0 résultat(s)</div>
+        <div id="result-count"> </div>
       </div>
+
     </div>
-  
+
+    <div class="card">
+     <h2 class="name_details"></h2><span style='font-size:100px;'>&#127757;</span>
+
+   <div class="planete_body">
+    <div class="PlaInfo">
+      <h2>Population :</h2><span style='font-size:100px;'>&#128106;</span>
+      <p class="population_details"></p>
+      <h2>Diamètre :</h2><span style='font-size:100px;'>&#9898;</span>
+      <p class="diameter_details"></p>
+    </div>
+   
+    <div class="PlaInfo">
+      <h2>Gravité :</h2><span style='font-size:100px;'>&#127761;</span>
+      <p class="gravity_details"></p>
+      <h2>Climat :</h2>
+      <span style='font-size:100px;'>&#9925;</span>
+      <p class="climat_details"></p>
+    </div>
+   
+   </div>
+    
+
+     
+    </div>
+
+
+    
+
 
    
 
 
     </section>
   </main>
-  <script src="planet.js"></script>
+
+  <script src="js/api.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/planet.js"></script>
 </body>
 </html>

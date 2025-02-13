@@ -193,6 +193,7 @@ main {
     padding: 10px;
     background: #00000050;
     border-radius: 10px;
+    margin:10px;
 
 }
 /* Formulaire de recherche + tri */
@@ -248,4 +249,29 @@ main {
   /* Pied de table pour le nombre de résultats */
   #result-count {
     margin-top: 10px;
+  }
+  .planet_info{
+    display: flex;
+    justify-content: space-between;
+  }
+  .planete_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .PlaInfo{
+    padding: 20px;
+    margin-top: 10%;
+    height: 30%;
+  
+    
+  }
+
+  .PlaInfo h2 {
+    padding: 20px;
+  }
+
+  .PlaInfo p {
+    font-size: 25px;
+    font-weight: 600;
   }
